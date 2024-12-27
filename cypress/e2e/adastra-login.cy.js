@@ -17,7 +17,7 @@ describe('Login Functionality', () => {
       cy.get('input[placeholder="Password"]').type('Qazwsx@123');
       cy.get('#kt_sign_in_submit').click({timeout:1000});
       // verify correctly navigate to the the home page after login 
-      cy.contains('Dashboard').should('be.visible');
+      cy.contains('Dashboard').should('be.visible');cy.contains('Dashboard').should('be.visible');
     });
 
     it('should show an error message for invalid email', () => {
@@ -42,6 +42,6 @@ describe('Login Functionality', () => {
        cy.contains('Forgot Password ').should('be.visible');
     });
   
-   
+  
   });
   
