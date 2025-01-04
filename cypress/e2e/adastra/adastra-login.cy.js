@@ -3,7 +3,7 @@ describe('Login Functionality', () => {
   
   beforeEach(() => {
     // Navigate to the login page before each test
-    cy.visit('https://connectqas.ad-astrainc.com/');
+    cy.visit(credentials.loginPage);
   });
 
   it('verify sign in form display correctly', () => {
