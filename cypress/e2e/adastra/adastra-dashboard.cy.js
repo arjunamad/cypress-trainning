@@ -9,7 +9,7 @@ describe('Dashboard Functionality', () => {
     cy.login(credentials.valid.email, credentials.valid.password);
   });
 
-  it('should log in successfully with valid credentials', () => {
+  it('should be visible dashbord', () => {
     // After login, verify the dashboard is visible
     cy.contains('Dashboard').should('be.visible');
   });
