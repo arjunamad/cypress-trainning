@@ -1,0 +1,26 @@
+name: Run Cypress Tests
+
+on:
+  push:
+    branches:
+      - main  # Adjust if you want to monitor a different branch
+  pull_request:
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # Adjust to match your Node.js version
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Cypress Tests
+        run: npx cypress run
